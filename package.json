@@ -1,6 +1,6 @@
 {
   "name": "agent-view-style",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "description": "agent-view-style",
   "main": "index.js",
   "dependencies": {

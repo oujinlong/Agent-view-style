@@ -1,0 +1,177 @@
+// ## Header styles
+// ------------------------------
+
+.header {
+  display: flex;
+  padding: 0 .5rem;
+  > .brand {
+    margin: 0 1rem 0 0;
+    font: italic ($header-height * .625) sans-serif;
+    line-height: $header-height;
+
+    > a {
+      color: $brand-color;
+      &:hover {
+        color: $brand-hover-color;
+      }
+    }
+    > .logo {
+      font-size: 20px;
+      max-font-size: 10px;
+      margin-left: 20px;
+    }
+    &:hover  {
+      color: $brand-hover-color;
+    }
+  }
+
+  > .toolbar {
+    display: flex;
+    flex: 1;
+    > .list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > .item {
+        position: relative;
+        > a {
+          display: block;
+          padding: 0 .625rem;
+          color: $menu-item-color;
+          font-size: ($header-height * .375);
+          line-height: $header-height;
+          margin-right: 1rem;
+          &::before {
+            margin-right: .3125rem;
+          }
+
+          > img {
+            width: ($header-height - 1.4);
+            height: ($header-height - 1.4);
+            margin-top: -.25rem;
+            background: $menu-image-background;
+            border: $menu-image-border;
+            vertical-align: middle;
+            border-radius: ($header-height - 1.4)/2;
+          }
+
+          >.userInfo {
+            float: right;
+            text-align: left;
+            margin-left: 10px;
+            font-size: (($header-height - 1.4) / 2) - 0.1;
+            color: $header-item-color;
+            >.info-text {
+              color: $header-item-color;
+              line-height: ($header-height / 2);
+              white-space: nowrap;
+              text-overflow:ellipsis;
+              overflow:hidden;
+              width: $header-max-info-width;
+              //max-width: $header-max-info-width;
+              width: $header-max-info-width;
+              min-width: $header-min-info-width;
+            }
+          }
+
+          >.arrow {
+            font-size: $header-arrow-width;
+            width: $header-arrow-width;
+            height: $header-arrow-width;
+            float: right;
+            line-height: $header-height;
+            padding-right: 1rem;
+          }
+
+          >.arrow-down {
+            font-size: $header-arrow-width;
+            width: $header-arrow-width;
+            height: $header-arrow-width;
+            float: right;
+            line-height: $header-height;
+            padding-right: 1rem;
+            transform:rotate(360deg)scale(0.5);
+          }
+
+      }
+
+      > .list {
+        display: none;
+        list-style: none;
+        position: absolute;
+        z-index: 99;
+        //min-width: $header-sub-width;
+        text-align: left !important;
+        min-width: $header-min-info-width + $header-height + $header-arrow-width - 1.4 + 1.625rem;
+        //max-width: $header-max-info-width + $header-height - 1.4 + 0.625rem;
+        width: $header-max-info-width + $header-height + $header-arrow-width - 1.4 + 1.625rem;
+        margin: 0;
+        margin-right: 1rem;
+        padding: .625rem;
+        background: $menu-item-hover-background;
+        > .divider::before {
+          display: block;
+          height: .0625rem;
+          margin: .125rem;
+          background: $menu-border-background;
+          content: '';
+        }
+
+        > .item  {
+          > a {
+            display: block;
+            padding: .125rem;
+            color: $header-item-color;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            margin-bottom: 1rem;
+          }
+
+          &:hover {
+            > a {
+              color: $menu-item-hover-color;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        > a {
+          background: $menu-item-hover-background;
+          color: $menu-item-hover-color;
+        }
+
+        > .list {
+          display: block;
+        }
+      }
+    }
+
+      > .notification {
+        line-height: $header-height;
+        font-size: $header-height - 2;
+        margin-right: 2rem;
+        align-self: center;
+        cursor: pointer;
+      }
+    &:last-child {
+      margin-left: auto;
+
+      > .item {
+        > .list {
+          right: 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 568px) {
+.header > .toolbar > .list:first-child {
+  display: none;
+}
+}

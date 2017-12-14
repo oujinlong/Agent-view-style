@@ -1,0 +1,23 @@
+{
+  "name": "agent-view-style",
+  "version": "1.1.1",
+  "description": "angent view style ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oujinlong/Agent-view-style.git"
+  },
+  "keywords": [
+    "agent",
+    "view"
+  ],
+  "author": "oujinlong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oujinlong/Agent-view-style/issues"
+  },
+  "homepage": "https://github.com/oujinlong/Agent-view-style#readme"
+}

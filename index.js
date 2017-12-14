@@ -1,4 +1,1 @@
-exports.showMsg = function () {
-    console.log("This is my first module");
-};
-
+module.exports=require('./styles/main.scss')
